@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Skewness - Guess the Statistic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="skewness-game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="game-header">
+            <div class="header-left">
+                <button class="back-button" onclick="goToMainMenu()">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Menu
+                </button>
+            </div>
+            <div class="header-center">
+                <div class="logo">
+                    <h1>Guess the Skewness</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="score-display">
+                    <span class="lives">❤️ <span id="lives">3</span></span>
+                    <span class="coins">🪙 <span id="coins">0</span></span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-content">
+            <div class="game-instructions">
+                <h2>How to Play</h2>
+                <p>Look at the histogram below and guess the skewness of the distribution. Skewness measures how asymmetric the distribution is.</p>
+                <p><strong>Sample skewness</strong> is calculated as the third moment divided by the standard deviation cubed. It measures the asymmetry of the distribution:</p>
+                <ul>
+                    <li><strong>Negative skewness</strong> = Left-skewed (long tail on left, most data on right)</li>
+                    <li><strong>Zero skewness</strong> = Symmetric (like normal distribution)</li>
+                    <li><strong>Positive skewness</strong> = Right-skewed (long tail on right, most data on left)</li>
+                </ul>
+                <div class="scoring-rules">
+                    <h3>Scoring:</h3>
+                    <ul>
+                        <li>Within 0.3 of true skewness: +1 life, +5 coins</li>
+                        <li>Within 0.5 of true skewness: +1 coin</li>
+                        <li>More than 0.5 off: -1 life</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="plot-container">
+                    <canvas id="histogram" width="400" height="400"></canvas>
+                </div>
+                
+                <div class="guess-section">
+                                    <div class="guess-input">
+                    <label for="skewnessGuess">Your guess:</label>
+                    <input type="number" id="skewnessGuess" step="0.01" placeholder="Enter your guess" value="0">
+                </div>
+                    
+                    <button class="submit-guess" id="submitGuess" onclick="submitGuess()">
+                        <i class="fas fa-check"></i>
+                        Submit Guess
+                    </button>
+                </div>
+
+                <div class="result-section" id="resultSection" style="display: none;">
+                    <div class="result-content">
+                        <h3 id="resultTitle">Result</h3>
+                        <div class="result-details">
+                            <div class="result-row">
+                                <span>Your guess: <strong id="userGuess">0.0</strong></span>
+                                <span>True skewness: <strong id="trueSkewness">0.0</strong></span>
+                                <span>Difference: <strong id="difference">0.0</strong></span>
+                            </div>
+                        </div>
+                        <div class="score-change" id="scoreChange">
+                            <span id="scoreMessage">You earned 1 coin!</span>
+                        </div>
+                    </div>
+                    <button class="next-round" id="nextRound" onclick="nextRound()">
+                        <i class="fas fa-arrow-right"></i>
+                        Next Round
+                    </button>
+                </div>
+            </div>
+
+            <div class="game-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Round</span>
+                    <span class="stat-value" id="currentRound">1</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Best Streak</span>
+                    <span class="stat-value" id="bestStreak">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Average Error</span>
+                    <span class="stat-value" id="avgError">0.00</span>
+                </div>
+            </div>
+        </main>
+
+        <div class="game-over-modal" id="gameOverModal" style="display: none;">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <div class="final-stats">
+                    <p>Final Score: <span id="finalCoins">0</span> coins</p>
+                    <p>Rounds Played: <span id="finalRounds">0</span></p>
+                    <p>Best Streak: <span id="finalStreak">0</span></p>
+                </div>
+                <div class="modal-buttons">
+                    <button class="play-again" onclick="restartGame()">
+                        <i class="fas fa-redo"></i>
+                        Play Again
+                    </button>
+                    <button class="main-menu" onclick="goToMainMenu()">
+                        <i class="fas fa-home"></i>
+                        Main Menu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="skewness-game.js"></script>
+</body>
+</html> 

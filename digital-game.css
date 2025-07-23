@@ -1,0 +1,488 @@
+/* Game-specific styles */
+body {
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    border-left: 1px solid #e5e7eb;
+    border-right: 1px solid #e5e7eb;
+    min-height: 100vh;
+}
+
+/* Game Header */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-left, .header-right {
+    flex: 1;
+}
+
+.header-center {
+    flex: 2;
+    text-align: center;
+}
+
+.header-center .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.header-center .logo i {
+    font-size: 2.5rem !important;
+    color: #2563eb !important;
+}
+
+.header-center .logo h1 {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    color: #1a1a1a !important;
+}
+
+.back-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-button:hover {
+    background: #1d4ed8;
+}
+
+.score-display {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.lives, .coins {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+}
+
+/* Game Content */
+.game-content {
+    background: white;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/* Instructions */
+.game-instructions {
+    background: #f8f9fa;
+    color: #1a1a1a;
+    padding: 30px 40px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.game-instructions h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.game-instructions p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.game-instructions ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.game-instructions li {
+    margin-bottom: 8px;
+    color: #6b7280;
+}
+
+.scoring-rules {
+    background: #e5e7eb;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.scoring-rules h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Game Area */
+.game-area {
+    padding: 40px;
+    text-align: center;
+}
+
+.plot-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#priceChart {
+    border: 1px solid #e5e7eb;
+    background: white;
+}
+
+/* Guess Section */
+.guess-section {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.guess-input {
+    margin-bottom: 25px;
+}
+
+.guess-input label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.guess-input input[type="range"] {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    outline: none;
+    -webkit-appearance: none;
+    margin-bottom: 10px;
+}
+
+.guess-input input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #2563eb;
+    cursor: pointer;
+}
+
+.guess-input input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #2563eb;
+    cursor: pointer;
+    border: none;
+}
+
+.guess-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    display: block;
+    margin-top: 10px;
+}
+
+.submit-guess {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.submit-guess:hover {
+    background: #1d4ed8;
+}
+
+.submit-guess:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Result Section */
+.result-section {
+    margin-top: 30px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-left: 5px solid #2563eb;
+}
+
+.result-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.result-details {
+    margin-bottom: 20px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.result-row span {
+    font-size: 1.1rem;
+    color: #6b7280;
+    text-align: center;
+}
+
+.result-row strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.score-change {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.score-change.positive {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.score-change.negative {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.next-round {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.next-round:hover {
+    background: #1d4ed8;
+}
+
+/* Game Stats */
+.game-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 30px 40px;
+    background: #f8f9fa;
+    border-top: 1px solid #e5e7eb;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e5e7eb;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* Game Over Modal */
+.game-over-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    border: 1px solid #e5e7eb;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.final-stats {
+    margin-bottom: 30px;
+}
+
+.final-stats p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.final-stats span {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.play-again, .main-menu {
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.play-again {
+    background: #2563eb;
+    color: white;
+}
+
+.main-menu {
+    background: #6c757d;
+    color: white;
+}
+
+.play-again:hover, .main-menu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .header-left, .header-right {
+        flex: none;
+    }
+    
+    .score-display {
+        justify-content: center;
+    }
+    
+    .game-area {
+        padding: 20px;
+    }
+    
+    .game-instructions {
+        padding: 20px;
+    }
+    
+    .game-stats {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+    }
+    
+    .play-again, .main-menu {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header-center h1 {
+        font-size: 1.5rem;
+    }
+    
+    .game-instructions h2 {
+        font-size: 1.5rem;
+    }
+    
+    .guess-value {
+        font-size: 1.2rem;
+    }
+    
+    .modal-content {
+        padding: 30px 20px;
+    }
+} 

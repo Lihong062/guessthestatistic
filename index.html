@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Statistic - Test Your Data Intuition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <h1>Guess the Statistic</h1>
+            </div>
+            <p class="tagline">Test your data intuition with interactive guessing games</p>
+        </header>
+
+        <main class="main-content">
+
+            <section class="games-grid">
+                <div class="game-card" onclick="navigateToGame('correlation')">
+                    <h3>Guess the Correlation</h3>
+                    <p>Examine scatter plots and estimate the correlation coefficient between variables.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="navigateToGame('sharpe')">
+                    <h3>Guess the Sharpe</h3>
+                    <p>Examine stock price charts and estimate the Sharpe ratio. Test your risk-adjusted return intuition.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="navigateToGame('leverage')">
+                    <h3>Guess the Leverage</h3>
+                    <p>Examine stock price charts and guess the optimal leverage for maximum compounded returns.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="navigateToGame('digital')">
+                    <h3>Guess the Digital</h3>
+                    <p>Examine 11 months of stock data and guess the probability of crossing a barrier by year-end.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="navigateToGame('one-touch')">
+                    <h3>Guess the One-Touch</h3>
+                    <p>Examine 11 months of stock data and guess the probability of touching the barrier.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="navigateToGame('r-squared')">
+                    <h3>Guess the R²</h3>
+                    <p>Examine scatter plots and guess the coefficient of determination (R²) between two variables.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="navigateToGame('skewness')">
+                    <h3>Guess the Skewness</h3>
+                    <p>Examine histograms and guess the skewness of the distribution.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="navigateToGame('kurtosis')">
+                    <h3>Guess the Kurtosis</h3>
+                    <p>Examine histograms and guess the kurtosis of the distribution.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="navigateToGame('volatility')">
+                    <h3>Guess the Volatility</h3>
+                    <p>Examine prices and estimate the annual volatility percentage.</p>
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                </div>
+
+
+            </section>
+
+            <section class="about-section">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>About</h3>
+                        <p>Developed as a research tool to study human data intuition and statistical perception.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3>Contact</h3>
+                        <p>Have suggestions or found a bug? <a href="mailto:contact@guessthestatistic.com">Contact us</a>.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3>Affiliations</h3>
+                        <p>This website is affiliated with <a href="https://freeportmarkets.com" target="_blank">Freeport Markets</a>, a decentralized marketplace.</p>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>© 2025 Guess the Statistic. All rights reserved.</p>
+                    <p>If you like our content, check out our long-form blog about finance, investing, math, and statistics at <a href="https://freeportlogbook.substack.com/" target="_blank">The Logbook</a>.</p>
+                </div>
+            </section>
+        </main>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
