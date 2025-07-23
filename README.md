@@ -1,186 +1,74 @@
 # Guess the Statistic
 
-A modern, interactive web platform for testing and improving your statistical intuition through various guessing games. The platform is designed to be both educational and entertaining, helping users develop better understanding of data patterns and relationships.
+Test your data intuition with interactive guessing games focused on finance, statistics, and quantitative analysis.
 
-## 🎯 About the Project
+## About
 
-This platform was inspired by the original "Guess the Correlation" game and expands on the concept to include multiple types of statistical guessing challenges. Each game focuses on different aspects of data interpretation, making learning statistics fun and engaging.
+Guess the Statistic is a collection of interactive games designed to test and improve your intuitive understanding of statistical concepts commonly used in finance and data analysis. Each game presents real-world scenarios where you must estimate key statistical measures based on visual data.
 
-### Research Purpose
+## Games
 
-While the games are designed to be entertaining, they also serve a research purpose. Data on user guesses is collected to analyze how humans perceive correlations and other statistical relationships in data visualizations. The more people play, the more valuable data is generated for research on human statistical intuition.
+### Core Statistics
+- **Guess the Correlation** - Examine scatter plots and estimate correlation coefficients
+- **Guess the R²** - Analyze scatter plots to determine coefficient of determination
+- **Guess the Skewness** - Study histograms to identify distribution asymmetry
+- **Guess the Kurtosis** - Examine histograms to assess distribution tail behavior
 
-## 🎮 Available Games
+### Financial Metrics
+- **Guess the Sharpe** - Analyze stock price charts to estimate risk-adjusted returns
+- **Guess the Volatility** - Examine price data to estimate annual volatility percentages
+- **Guess the Leverage** - Study price charts to determine optimal leverage for maximum returns
 
-### 1. Guess the Correlation ✅ (Available Now)
-- **Description**: Look at scatter plots and guess the correlation coefficient between variables
-- **Range**: 0 (no correlation) to 1 (perfect correlation)
-- **Scoring**:
-  - Within 0.05 of true correlation: +1 life, +5 coins
-  - Within 0.10 of true correlation: +1 coin
-  - More than 0.10 off: -1 life
+### Options & Probability
+- **Guess the Digital** - Estimate probability of crossing price barriers by year-end
+- **Guess the One-Touch** - Calculate probability of touching price barriers
 
+## Features
 
+- **Clean, Minimalist Design** - Focus on content without visual clutter
+- **Interactive Visualizations** - Real-time charts and plots for each game
+- **Progressive Scoring System** - Earn coins and lives based on accuracy
+- **Educational Content** - Learn statistical formulas and concepts
+- **Research-Based** - Developed to study human data intuition and statistical perception
 
-## 🚀 Features
+## How to Play
 
-- **Modern, Responsive Design**: Beautiful UI that works on all devices
-- **Interactive Visualizations**: Real-time scatter plots using Chart.js
-- **Progressive Scoring System**: Earn coins and lives based on accuracy
-- **Streak Tracking**: Track your best consecutive correct guesses
-- **Statistics Dashboard**: Monitor your performance over time
-- **Keyboard Navigation**: Full keyboard support for accessibility
-- **Smooth Animations**: Engaging visual feedback and transitions
+1. Choose a game from the main menu
+2. Examine the provided data visualization
+3. Make your best estimate of the target statistic
+4. Submit your guess and see how close you were
+5. Learn from the results and try again
 
-## 🛠️ Technical Stack
+## Scoring System
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Charts**: Chart.js for data visualization
-- **Styling**: Custom CSS with modern design principles
-- **Icons**: Font Awesome for consistent iconography
-- **Fonts**: Inter font family for optimal readability
+Each game features a tiered scoring system:
+- **High Accuracy** - Earn lives and bonus coins
+- **Good Accuracy** - Earn coins
+- **Poor Accuracy** - Lose lives
 
-## 📦 Installation & Setup
+## Technical Details
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No additional software required - runs entirely in the browser
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Charts**: Chart.js for interactive visualizations
+- **Styling**: Custom CSS with responsive design
+- **Icons**: Font Awesome (minimal usage for essential UI elements)
 
-### Quick Start
-1. Clone or download this repository
-2. Open `index.html` in your web browser
-3. Start playing!
+## Development
 
-### Local Development
-If you want to run this locally for development:
+This project was developed as a research tool to study human data intuition and statistical perception. The games are designed to be both educational and engaging, helping users develop better intuitive understanding of statistical concepts.
 
-```bash
-# Clone the repository
-git clone <repository-url>
-cd guessthestatistic
+## Contact
 
-# Open in your preferred code editor
-code .
+Have suggestions or found a bug? [Contact us](mailto:contact@guessthestatistic.com)
 
-# Start a local server (optional, for development)
-# Using Python 3:
-python -m http.server 8000
+## Affiliations
 
-# Using Node.js (if you have http-server installed):
-npx http-server
+This website is affiliated with [Freeport Markets](https://freeportmarkets.com), a decentralized marketplace.
 
-# Then open http://localhost:8000 in your browser
-```
+## Related Content
 
-## 🎯 How to Play
-
-### Getting Started
-1. Visit the main page and choose a game
-2. Read the instructions carefully
-3. Make your guess using the provided interface
-4. Submit your answer and see how close you were
-5. Continue playing to improve your skills!
-
-### Tips for Success
-- **Start with Correlation**: This is the most intuitive game to begin with
-- **Look for Patterns**: Pay attention to the overall shape and direction of data
-- **Practice Regularly**: Statistical intuition improves with practice
-- **Don't Rush**: Take your time to analyze the visualizations
-
-## 🔧 Customization
-
-### Adding New Games
-To add a new guessing game:
-
-1. Create a new HTML file (e.g., `percentage-game.html`)
-2. Add corresponding CSS and JavaScript files
-3. Update the main `index.html` to include the new game card
-4. Implement the game logic following the existing pattern
-
-### Styling Customization
-The design uses CSS custom properties for easy theming. Key colors can be modified in `styles.css`:
-
-```css
-:root {
-  --primary-color: #667eea;
-  --secondary-color: #764ba2;
-  --accent-color: #ffd700;
-  --text-color: #333;
-  --background-color: #f8f9fa;
-}
-```
-
-## 📊 Data Collection
-
-### What We Collect
-- Game type and round number
-- User guesses and true values
-- Accuracy metrics
-- Session duration
-- Performance statistics
-
-### Privacy & Ethics
-- No personal information is collected
-- Data is anonymized and aggregated
-- Used solely for research purposes
-- Users can opt out of data collection
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-### Reporting Issues
-- Use the GitHub issue tracker
-- Provide detailed descriptions of bugs
-- Include steps to reproduce issues
-
-### Feature Requests
-- Suggest new game types
-- Propose UI/UX improvements
-- Recommend educational features
-
-### Code Contributions
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📈 Future Development
-
-### Planned Features
-- [ ] User accounts and progress tracking
-- [ ] Leaderboards and achievements
-- [ ] More game types (regression, confidence intervals)
-- [ ] Educational content and tutorials
-- [ ] Mobile app versions
-- [ ] Multiplayer challenges
-
-### Research Goals
-- [ ] Publish findings on human statistical intuition
-- [ ] Develop educational tools based on insights
-- [ ] Create adaptive difficulty systems
-- [ ] Study learning progression patterns
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Inspired by the original "Guess the Correlation" game
-- Built with modern web technologies
-- Designed for educational and research purposes
-- Community-driven development
-
-## 📞 Contact
-
-Have questions, suggestions, or found a bug? We'd love to hear from you!
-
-- **Email**: [your-email@example.com]
-- **Twitter**: [@your-handle]
-- **GitHub**: [your-github-profile]
+If you enjoy these games, check out our long-form blog about finance, investing, math, and statistics at [The Logbook](https://freeportlogbook.substack.com/).
 
 ---
 
-**Note**: This platform is designed for educational and research purposes. Please play fairly and don't use automated tools or bots, as this affects the quality of research data and the experience for other users. 
+© 2025 Guess the Statistic. All rights reserved. 
